@@ -205,3 +205,27 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Project-specific ignores: generated test vectors and simulation artifacts
+# Reference test vectors (generated .npz and metadata)
+reference/vectors/
+reference/vectors/*.npz
+reference/vectors/*.json
+
+# Verilog / simulation outputs (Verilator, VCDs, logs, generated C++)
+obj_dir/
+csrc/
+*.vcd
+*.vcd.gz
+*.log
+vlt_dump.vcd
+sim_build/
+verilator_build/
+
+# Memory / hex files produced by converters or testbenches
+*.hex
+*.mem
+
+# Misc build/temp artifacts
+rtl/**/obj_dir/
+rtl/**/vcd/
